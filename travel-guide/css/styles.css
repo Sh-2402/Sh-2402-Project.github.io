@@ -449,6 +449,23 @@ details summary{
 
 /*My changes for now (Gus) */
 
+.brazil-theme .dest-hero{
+  position: relative;
+  aspect-ratio: 16/7;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,.08);
+  overflow:hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65)),
+    url("https://www.rodamundo.tur.br/blog/wp-content/uploads/2019/03/Ba%C3%ADa-dos-Porcos-em-Fernando-de-Noronha-rodamundo-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .footer{
   margin-top: 40px;
   padding: 24px 0;
