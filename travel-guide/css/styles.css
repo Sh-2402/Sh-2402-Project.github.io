@@ -40,6 +40,7 @@ img{
   padding: 0 20px;
 }
 
+
 .nav{
   position:sticky;
   top:0;
@@ -243,22 +244,7 @@ img{
   color:var(--muted);
 }
 
-.dest-hero{
-  position: relative;
-  aspect-ratio: 16/7;
-  border-radius: 20px;
-  border: 1px solid rgba(255,255,255,.08);
-  overflow:hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background:
-    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65)),
-    url("https://assets.micontenthub.com/traveloffers/travel-tips/dublin_by1F326rd8.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+/*Original dest-hero was here*/
 
 .dest-hero img{
   width:100%;
@@ -439,37 +425,51 @@ details summary{
 /* Space adjustments so sections breathe over image */
 .hero{ padding: 120px 0 36px; }
 
+.video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+/* ---- Brazil Page Theme Override ---- */
 /*My changes for now (Gus) */
 
 .brazil-theme .dest-hero{
-  position: relative;
-  aspect-ratio: 16/7;
+  height: 400px;
+  width: 100%;
   border-radius: 20px;
-  border: 1px solid rgba(255,255,255,.08);
-  overflow:hidden;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   background:
     linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65)),
     url("https://www.rodamundo.tur.br/blog/wp-content/uploads/2019/03/Ba%C3%ADa-dos-Porcos-em-Fernando-de-Noronha-rodamundo-1.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
 }
 
-.brazil-theme {
+.brazil-theme{
   --bg: #1b241b;
   --bg-soft: #222d22;
-  --card: #1e2a1e;
-  --text: #f1f5e8;
+  --card: #0f2430;
+  --text: #ffffff;
   --muted: #b6c2a8;
-  --accent: #7ca86a;
+  --accent:   #20B2AA;
   --accent-2: #a4c49b;
   --ring: rgba(124,168,106,.4);
 
-  /* Override full page background on Ireland page only */
-  background: #b4b100 !important;
+  /* Override full page background on Brazil page only */
+  background:  #191970 !important;
+}
+
+.brazil-theme .things .story-block{
+  background-color: #000080;
 }
 
 .footer{
@@ -484,26 +484,6 @@ details summary{
   padding: 10px;
   width: 50%;
 }
-
-/*
-.row{
-  width: 85%;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.column{
-  flex-basis: 25%;
-  padding: 10px;
-  margin-top: auto;
-}
-.column p{
-  margin-top: auto;
-}
-*/
 
 .story-block {
   display: flex;
@@ -585,7 +565,6 @@ details summary{
 }
 
 /* ---- Ireland Page Theme Override ---- */
-/* Applies only when <body class="ireland-theme"> */
 
 body.ireland-theme {
   --bg: #1b241b;
@@ -601,20 +580,29 @@ body.ireland-theme {
   background: #1b241b !important;
 }
 
-/* Olive background for story sections on Ireland page */
-.ireland-theme .story-block {
-  background-color: #202a20 !important;
-}
-
-/* Olive gradient for Ireland hero */
-.ireland-theme .dest-hero {
+.ireland-theme .dest-hero{
+  height: 400px;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background:
-    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65)),
     url("https://assets.micontenthub.com/traveloffers/travel-tips/dublin_by1F326rd8.jpg");
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
 }
+
+/* Olive background for story sections on Ireland page */
+.ireland-theme .story-block {
+  background-color: #202a20 !important;
+}
+
+/* Ireland Page Video Styling */
+
 
 /* Olive glow on cards for Ireland page */
 .ireland-theme .card {
@@ -622,8 +610,16 @@ body.ireland-theme {
   border: 1px solid rgba(124,168,106,0.3);
 }
 
+/* ---- Dubai Page Theme Override ---- */
 
 .Dubai-theme .dest-hero {
+  height: 400px;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background:
     linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
     url("https://cdn.twocontinents.com/downtown_dubai_guide_12c7f49f66.jpg");
@@ -643,15 +639,3 @@ body.Dubai-theme {
   --ring: rgba(165, 172, 101, 0.4);
   background: #4e513d !important;
 }
-/* Ireland Page Video Styling */
-.ireland-video {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-  border-radius: 16px;
-  border: 1px solid rgba(255,255,255,0.25);
-}
-
-  
