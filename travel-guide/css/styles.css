@@ -1,4 +1,3 @@
-
 :root{
   --bg: #0f172a;
   --bg-soft: #111827;
@@ -21,13 +20,29 @@ html,body{
   background:
     radial-gradient(1200px 600px at 10% 0%, rgba(56,189,248,.15), transparent 60%),
     radial-gradient(900px 500px at 90% -10%, rgba(167,139,250,.15), transparent 60%),
-    linear-gradient(180deg, #343435e2, #343435 60%, #19191a);
+    linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
   background-color:var(--bg);
-  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
 }
 
-.faq{
-  line-height: 3.0
+.wrapper{
+  min-height: 100%;
+}
+
+main{
+  padding-bottom: 60px;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  color: var(--muted);
+  border-top: 1px solid rgba(255,255,255,.07);
 }
 
 a{color:inherit;text-decoration:none}
@@ -44,7 +59,6 @@ img{
   padding: 0 20px;
 }
 
-
 .nav{
   position:sticky;
   top:0;
@@ -59,7 +73,6 @@ img{
   border-bottom: 1px solid rgba(255,255,255,.07);
   box-shadow: 0 6px 30px rgba(0,0,0,.35);
   backdrop-filter: blur(8px);
-  
 }
 
 .nav-inner{
@@ -164,8 +177,11 @@ img{
 
 .card:hover{
   transform: translateY(-3px);
-  
-  
+}
+
+.card img{
+  height: 160px;
+  object-fit: cover;
 }
 
 .card h3{
@@ -214,7 +230,9 @@ img{
   border:1px solid rgba(255,255,255,.07);
 }
 
-.hero-img { display: none; }
+.hero-img{
+  display: none; 
+}
 
 .kicker{
   display:inline-flex;
@@ -480,13 +498,6 @@ details summary{
 
 .brazil-theme .things .story-block{
   background-color: #000080;
-}
-
-.footer{
-  margin-top: 40px;
-  padding: 24px 0;
-  color: var(--muted);
-  border-top: 1px solid rgba(255,255,255,.07);
 }
 
 .img-content{
