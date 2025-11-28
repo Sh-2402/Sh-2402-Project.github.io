@@ -64,7 +64,6 @@ img{
   top:0;
   z-index:50;
   background: transparent;
-  /*background: rgba(235, 232, 232, 0.87);*/
   transition: background .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
 
