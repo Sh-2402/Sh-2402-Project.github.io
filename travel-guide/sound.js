@@ -1,27 +1,55 @@
-const waves_audio = new Audio("./audios/6ce21b92-57fb-4aee-b664-86743948172e.mp3");
-const wind_audio = new Audio("./audios/9deff6da-f87d-4802-a901-0c07170cb7c4.mp3");
-const nature_audio = new Audio("./audios/a592dcf9-8fbb-45ef-a048-9a0d2ea9c9af.mp3");
 
-document.addEventListener('click', keyPlay);
+(function() {
+  document.addEventListener('DOMContentLoaded', () => {
+    const audio = document.getElementById('page-sound');
+    if (!audio) return;
 
-function keyPlay() {
-  
-  switch (Math.floor(Math.random() * 3)){
-    case 0: {
-      waves_audio.play();
-      break;
-    }
-    case 1: {
-      wind_audio.play();
-      break;
-    }
-    case 2: {
-      nature_audio.play();
-      break;
-    }
-    default: {
-      waves_audio.play();
-    }
-  }
+    audio.preload = 'auto';
+    audio.playsInline = true;
+    audio.volume = 1.0;
 
-}
+    audio.play().then(() => {
+      console.log('Audio autoplayed');
+    }).catch(err => {
+      console.warn('Autoplay blocked or failed:', err);
+      showFallbackPlayButton(audio);
+    });
+
+    if (!localStorage.getItem('site-sound-played')) {
+       attemptPlay();
+     }
+
+    function showFallbackPlayButton(audioEl) {
+      if (document.getElementById('play-sound-btn')) return;
+
+      const btn = document.createElement('button');
+      btn.id = 'play-sound-btn';
+      btn.textContent = 'Play sound';
+      Object.assign(btn.style, {
+        position: 'fixed',
+        right: '1rem',
+        bottom: '1rem',
+        zIndex: 9999,
+        padding: '0.6rem 1rem',
+        borderRadius: '6px',
+        border: 'none',
+        cursor: 'pointer',
+        background: '#222',
+        color: '#fff',
+        fontSize: '0.95rem',
+      });
+
+      btn.addEventListener('click', async () => {
+        try {
+          await audioEl.play();
+          console.log('User-initiated playback succeeded');
+          btn.remove();
+        } catch (err) {
+          console.error('Playback still failed on user gesture:', err);
+        }
+      });
+
+      document.body.appendChild(btn);
+    }
+  });
+})();
