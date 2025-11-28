@@ -12,7 +12,7 @@
 html, body{
   margin:0;
   padding:0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  font-family: system-ui, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
   color:var(--text);
   background:
     radial-gradient(1200px 600px at 10% 0%, rgba(56,189,248,.15), transparent 60%),
@@ -192,7 +192,7 @@ img{
 
 .button:hover{
   transform:translateY(-1px);
-  box-shadow:0 10px 30px rgba(56,189,248,.15);
+  
 }
 
 .button.primary{
