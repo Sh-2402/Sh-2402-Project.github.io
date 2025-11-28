@@ -4,7 +4,7 @@
   --card: hsl(226, 49%, 8%);
   --text: #e5e7eb;
   --muted: #9ca3af;
-  --accent: #38bdf8;
+  --accent: #06141a;
   --accent-2:#a78bfa;
   --ring: rgba(56,189,248,.4);
   --radius: 18px;
@@ -167,7 +167,7 @@ img{
 }
 
 .card{
-  background: radial-gradient(120% 120% at 20% 0%, rgba(56,189,248,.10), transparent 40%),
+  background: 
               linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
   border: 1px solid rgba(255,255,255,.07);
   border-radius: var(--radius);
@@ -497,7 +497,7 @@ details summary{
 }
 
 .brazil-theme .things .story-block{
-  background-color: #000080;
+  
 }
 
 .img-content{
@@ -619,7 +619,7 @@ body.ireland-theme {
 
 /* Olive background for story sections on Ireland page */
 .ireland-theme .story-block {
-  background-color: #202a20 !important;
+  
 }
 
 /* Ireland Page Video Styling */
